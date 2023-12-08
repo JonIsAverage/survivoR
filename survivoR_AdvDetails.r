@@ -19,7 +19,6 @@ load(paste0("/dbfs/", rdataname,".rda"))
 your_data_frame_name <- rdataname
 df <- get(your_data_frame_name)
 sp_df <- as.DataFrame(df)
-createOrReplaceTempView(sp_df, rdataname)
 createOrReplaceTempView(sp_df, (paste0("tmp_", rdataname)))
 
 # COMMAND ----------
